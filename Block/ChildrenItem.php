@@ -26,14 +26,15 @@ class ChildrenItem extends Magento\Backend\Block\Widget\Grid\Column
         $this->productLinkManagement = $productLinkManagement;
     }
 
-    /**
-     * Get all children items of bundle product
-     *
-     * @return LinkInterface[]
-     */
+//    public function getSkuProduct() {
+//
+//
+//    }
+
+
     public function getChildrenItems()
     {
-
+        $sku = "BAB";
         try {
             $items = $this->productLinkManagement->getChildren($sku);
         } catch (Exception $exception) {
