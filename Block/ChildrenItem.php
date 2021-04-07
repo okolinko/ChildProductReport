@@ -287,9 +287,8 @@ class ChildrenItem extends \Magento\Framework\View\Element\Template
         }
         if ($this->getSkuProduct($renderedValue) != NULL){
             $sku = $this->getSkuProduct($renderedValue);
-//            $result = $this->getChildrenItems($sku);
-
-            return "TEST";
+            $result = $this->getChildrenItems($sku);
+            return $result;
         }
         /*
          * if column has determined callback for framing call
@@ -314,18 +313,19 @@ class ChildrenItem extends \Magento\Framework\View\Element\Template
         return  NULL;
     }
 
-
     public function getChildrenItems($sku)
     {
-        if ($this->getSkuProduct() !== NULL) {
-            $sku = $this->getSkuProduct();
+        $res = [];
+        try {
             $items = $this->productLinkManagement->getChildren($sku);
             foreach ($items as $item) {
-                $res = $item->getData();
+                $resSku = $item->getData()['sku'];
+                array_push($res, $resSku);
             }
-            return $res;
+            return implode(", ", $res);
+        } catch (Exception $exception) {
+            return "None";
         }
-        return "None";
     }
 
 

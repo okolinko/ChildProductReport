@@ -7,7 +7,7 @@
         </arguments>
         <block class="Luxinten\ChildProductReport\Block\ChildrenItem" name="adminhtml.report.grid.columnSet.child"  as="child">
             <arguments>
-                <argument name="header" xsi:type="string" translate="true">Child</argument>
+                <argument name="header" xsi:type="string" translate="true">Child Sku</argument>
                 <argument name="type" xsi:type="string">text</argument>
                 <argument name="index" xsi:type="string">order_items_sku</argument>
                 <argument name="id" xsi:type="string">sku</argument>
