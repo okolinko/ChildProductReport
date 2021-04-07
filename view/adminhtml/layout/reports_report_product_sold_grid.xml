@@ -5,18 +5,7 @@
             <argument name="id" xsi:type="string">report_product_sold</argument>
             <argument name="count_totals" xsi:type="string">1</argument>
         </arguments>
-        <block class="Magento\Backend\Block\Widget\Grid\Column" name="adminhtml.report.grid.columnSet.name" as="name">
-            <arguments>
-                <argument name="header" xsi:type="string" translate="true">Product</argument>
-                <argument name="type" xsi:type="string">text</argument>
-                <argument name="index" xsi:type="string">order_items_name</argument>
-                <argument name="id" xsi:type="string">name</argument>
-                <argument name="column_css_class" xsi:type="string">col-product</argument>
-                <argument name="header_css_class" xsi:type="string">col-product</argument>
-            </arguments>
-        </block>
         <block class="Luxinten\ChildProductReport\Block\ChildrenItem" name="adminhtml.report.grid.columnSet.child"  as="child">
-<!--        <block class="Magento\Backend\Block\Widget\Grid\Column" name="adminhtml.report.grid.columnSet.order_id" as="child">-->
             <arguments>
                 <argument name="header" xsi:type="string" translate="true">Child</argument>
                 <argument name="type" xsi:type="string">text</argument>
@@ -24,27 +13,6 @@
                 <argument name="id" xsi:type="string">sku</argument>
                 <argument name="column_css_class" xsi:type="string">col-product</argument>
                 <argument name="header_css_class" xsi:type="string">col-product</argument>
-            </arguments>
-        </block>
-        <block class="Magento\Backend\Block\Widget\Grid\Column" name="adminhtml.report.grid.columnSet.sku" as="sku">
-            <arguments>
-                <argument name="header" xsi:type="string" translate="true">SKU</argument>
-                <argument name="type" xsi:type="string">text</argument>
-                <argument name="index" xsi:type="string">order_items_sku</argument>
-                <argument name="id" xsi:type="string">sku</argument>
-                <argument name="column_css_class" xsi:type="string">col-sku</argument>
-                <argument name="header_css_class" xsi:type="string">col-sku</argument>
-            </arguments>
-        </block>
-        <block class="Magento\Backend\Block\Widget\Grid\Column" name="adminhtml.report.grid.columnSet.ordered_qty" as="ordered_qty">
-            <arguments>
-                <argument name="header" xsi:type="string" translate="true">Ordered Quantity</argument>
-                <argument name="total" xsi:type="string">sum</argument>
-                <argument name="type" xsi:type="string">number</argument>
-                <argument name="index" xsi:type="string">ordered_qty</argument>
-                <argument name="id" xsi:type="string">ordered_qty</argument>
-                <argument name="column_css_class" xsi:type="string">col-qty</argument>
-                <argument name="header_css_class" xsi:type="string">col-qty</argument>
             </arguments>
         </block>
     </referenceBlock>
