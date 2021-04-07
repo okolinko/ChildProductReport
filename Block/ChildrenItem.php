@@ -328,7 +328,6 @@ class ChildrenItem extends \Magento\Framework\View\Element\Template
         }
     }
 
-
     /**
      * Validate frame callback
      *
@@ -355,13 +354,11 @@ class ChildrenItem extends \Magento\Framework\View\Element\Template
     public function getRowFieldExport(\Magento\Framework\DataObject $row)
     {
         $renderedValue = $this->getRenderer()->renderExport($row);
-
         if ($this->getSkuProduct($renderedValue) != NULL){
             $sku = $this->getSkuProduct($renderedValue);
             $result = $this->getChildrenItems($sku);
             return $result;
         }
-
         /*
          * if column has determined callback for framing call
          * it before give away rendered value
@@ -558,5 +555,4 @@ class ChildrenItem extends \Magento\Framework\View\Element\Template
     {
         return $this->_isGrouped;
     }
-
 }
