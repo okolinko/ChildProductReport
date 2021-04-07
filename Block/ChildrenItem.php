@@ -356,6 +356,12 @@ class ChildrenItem extends \Magento\Framework\View\Element\Template
     {
         $renderedValue = $this->getRenderer()->renderExport($row);
 
+        if ($this->getSkuProduct($renderedValue) != NULL){
+            $sku = $this->getSkuProduct($renderedValue);
+            $result = $this->getChildrenItems($sku);
+            return $result;
+        }
+
         /*
          * if column has determined callback for framing call
          * it before give away rendered value
