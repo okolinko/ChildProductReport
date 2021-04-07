@@ -1,4 +1,7 @@
 <?php
+
+//TEST
+
 namespace Luxinten\ChildProductReport\Block;
 
 use Exception;
